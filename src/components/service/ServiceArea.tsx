@@ -3,12 +3,12 @@ import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  { icon: "ads_click", title: "Digital Marketing", description: "Designed user interface contributes to a positive and a good user experience." },
-  { icon: "web", title: "Web Development", description: "Designed user interface contributes to a positive and a good user experience." },
-  { icon: "stream_apps", title: "Mobile Apps", description: "Designed user interface contributes to a positive and a good user experience." },
-  { icon: "design_services", title: "UI/UX Design", description: "Designed user interface contributes to a positive and a good user experience." },
-  { icon: "ads_click", title: "Digital Marketing", description: "Designed user interface contributes to a positive and a good user experience." },
-  { icon: "web", title: "Web Development", description: "Designed user interface contributes to a positive and a good user experience." },
+  { icon: "web", title: "Website Design & Development", description: "Websites tailored to your business needs, using the top industry technologies." },
+  { icon: "ads_click", title: "Search Engine Optimization", description: "Boost your visibility on Google with targeted SEO strategies." },
+  { icon: "stream_apps", title: "E-commerce Website Development", description: "Powerful online stores with secure payment gateways" },
+  { icon: "design_services", title: "Business Website Development", description: "Professional websites designed to showcase your brand, attract customers." },
+  { icon: "ads_click", title: "Website Redesign & Maintenance", description: "Modernize outdated sites with fresh designs, and ongoing maintenance" },
+  { icon: "web", title: "Portfolio & Personal Websites", description: "Stand out with a sleek portfolio or personal website that highlights your work" },
   
 ];
 

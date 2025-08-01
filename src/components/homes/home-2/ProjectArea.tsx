@@ -2,8 +2,7 @@
  
 import { Autoplay, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
- 
+import styles from './ProjectArea.module.css';
 
 const ProjectArea = () => {
   return (
@@ -77,13 +76,13 @@ const ProjectArea = () => {
           }}
             className="swiper portfolio-swiper">           
 
-                <SwiperSlide className="swiper-slide">
+                <SwiperSlide className="swiper-slide ">
                   <div className="portfolio-card-two">
-                    <img src="/assets/img/bg-img/20.jpg" alt="" />
+                    <img src="/assets/img/project/eyecare.png" alt="" className={styles.projectImage} />
 
 
                     <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="#">
+                      <a href="https://smarteye.care/" target="_blank" rel="noopener noreferrer">
                         <span className="material-symbols-outlined">
                           arrow_outward
                         </span>
@@ -93,12 +92,76 @@ const ProjectArea = () => {
 
 
                   <div className="portfolio-content-two">
-                    <h3>Branding Design platform</h3>
-                    <p className="mb-0">Branding Design</p>
+                    <h3>Instant Eye Care Clinic</h3>
+                    <p className="mb-0">Healthcare platform focused on eye care services
+</p>
                   </div>
                 </SwiperSlide>
 
                 <SwiperSlide className="swiper-slide">
+                  <div className="portfolio-card-two">
+                    <img src="/assets/img/project/madiba.png" alt="" className={styles.projectImage} />
+
+
+                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                      <a href="https://madibahostel.com/" target="_blank" rel="noopener noreferrer">
+                        <span className="material-symbols-outlined">
+                          arrow_outward
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+
+                  <div className="portfolio-content-two">
+                    <h3>Feedback App</h3>
+                    <p className="mb-0">Lightweight feedback tool for browser extension developers</p>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide className="swiper-slide">
+                  <div className="portfolio-card-two">
+                    <img src="/assets/img/project/feedbk.png" alt="" className={styles.projectImage} />
+
+
+                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                      <a href="https://feedbk.app/" target="_blank" rel="noopener noreferrer">
+                        <span className="material-symbols-outlined">
+                          arrow_outward
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+
+                  <div className="portfolio-content-two">
+                    <h3>Feedback App</h3>
+                    <p className="mb-0">Lightweight feedback tool for browser extension developers</p>
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide className="swiper-slide">
+                  <div className="portfolio-card-two">
+                    <img src="/assets/img/project/crackit.png" alt="" className={styles.projectImage} />
+
+
+                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
+                      <a href="https://crack-it-hunt.vercel.app/" target="_blank" rel="noopener noreferrer">
+                        <span className="material-symbols-outlined">
+                          arrow_outward
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+
+
+                  <div className="portfolio-content-two">
+                    <h3>Crack it Find it</h3>
+                    <p className="mb-0">Interactive website for a cerebral hunt show, that seamlessly blends intellect and adventure</p>
+                  </div>
+                </SwiperSlide>
+
+                {/* <SwiperSlide className="swiper-slide">
                   <div className="portfolio-card-two">
                     <img src="/assets/img/bg-img/21.jpg" alt="" />
 
@@ -117,49 +180,7 @@ const ProjectArea = () => {
                     <h3>Product Development</h3>
                     <p className="mb-0">Product Development</p>
                   </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="swiper-slide">
-                  <div className="portfolio-card-two">
-                    <img src="/assets/img/bg-img/20.jpg" alt="" />
-
-
-                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="#">
-                        <span className="material-symbols-outlined">
-                          arrow_outward
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-
-
-                  <div className="portfolio-content-two">
-                    <h3>Branding Design platform</h3>
-                    <p className="mb-0">Branding Design</p>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="swiper-slide">
-                  <div className="portfolio-card-two">
-                    <img src="/assets/img/bg-img/21.jpg" alt="" />
-
-
-                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="#">
-                        <span className="material-symbols-outlined">
-                          arrow_outward
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-
-
-                  <div className="portfolio-content-two">
-                    <h3>Product Development</h3>
-                    <p className="mb-0">Product Development</p>
-                  </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
              
             </Swiper>
           </div>

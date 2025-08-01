@@ -1,12 +1,14 @@
  
 import { useEffect, useState } from "react";
 import useSticky from "../../hooks/use-sticky";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import menu_data from "../../data/menu-data";
 import SearchArea from "../../common/SearchArea";
 import OffCanvas from "../../common/OffCanvas";
+import styles from "./HeaderOne.module.css";
 
 const HeaderOne = ({style_2} :any) => {
+  const location = useLocation();
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
       return localStorage.getItem("theme") || "light-mode";
@@ -59,8 +61,8 @@ const HeaderOne = ({style_2} :any) => {
           <div className="container">
 
             <Link className="navbar-brand" to="/">
-              <img className="dark-logo" src="/assets/img/core-img/logo.png" alt="" />
-              <img className="light-logo" src="/assets/img/core-img/pf-logo.jpg" alt="" />
+              <img className={`${styles.logo} dark-logo`} src="/assets/img/core-img/pf-logo5.png" alt="" />
+              <img className={`${styles.logo} light-logo`} src="/assets/img/core-img/pf-all-yellow.png" alt="" />
             </Link>
 
 
@@ -74,24 +76,39 @@ const HeaderOne = ({style_2} :any) => {
               <ul className="navbar-nav navbar-nav-scroll">
                 {menu_data.map((item, i) => (
                   <li key={i} className="vorix-dd">
-                    <Link to={item.link} 
-                    onMouseEnter={() =>  setNavTitle(item.title)}
-                     
-                    onClick={() => openMobileMenu(item.title)}>{item.title}</Link>
-                    {item.has_dropdown &&
+                    <Link 
+                      to={item.link} 
+                      className={location.pathname === item.link ? 'active' : ''}
+                      onMouseEnter={() =>  setNavTitle(item.title)}
+                      onClick={() => openMobileMenu(item.title)}
+                    >
+                      {item.title}
+                    </Link>
+                    
+                    {/* Dropdown menu logic - uncomment when needed */}
+                    {/* {item.has_dropdown && item.sub_menus && item.sub_menus.length > 0 &&
                       <ul className="vorix-dd-menu" style={{ display: navTitle === item.title ? 'block' : 'none' }}>
-                        {item.sub_menus.map((sub_menu, index) => (
+                        {item.sub_menus.map((sub_menu: any, index) => (
                           <li key={index} className="vorix-dd">
-                            <Link to={sub_menu.link} 
-                            onClick={() => openMobileMenu2(sub_menu.title)}
-                            onMouseEnter={() =>  setNavTitle2(sub_menu.title)}
-                            >{sub_menu.title}</Link>
+                            <Link 
+                              to={sub_menu.link} 
+                              className={location.pathname === sub_menu.link ? 'active' : ''}
+                              onClick={() => openMobileMenu2(sub_menu.title)}
+                              onMouseEnter={() =>  setNavTitle2(sub_menu.title)}
+                            >
+                              {sub_menu.title}
+                            </Link>
 
-                            {'has_inner_dropdown' in sub_menu && sub_menu.has_inner_dropdown &&
+                            {sub_menu.has_inner_dropdown && sub_menu.inner_submenu && sub_menu.inner_submenu.length > 0 &&
                               <ul className="vorix-dd-menu" style={{ display: navTitle2 === sub_menu.title ? 'block' : 'none' }}>
-                                {sub_menu?.inner_submenu?.map((inner_menu, inner_index) => (
+                                {sub_menu.inner_submenu.map((inner_menu: any, inner_index: number) => (
                                   <li key={inner_index}>
-                                    <Link to={inner_menu.link}>{inner_menu.title}</Link>
+                                    <Link 
+                                      to={inner_menu.link}
+                                      className={location.pathname === inner_menu.link ? 'active' : ''}
+                                    >
+                                      {inner_menu.title}
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -99,15 +116,14 @@ const HeaderOne = ({style_2} :any) => {
                           </li>
                         ))}
                       </ul>
-                    }
+                    } */}
                   </li>
                 ))}
-
               </ul>
 
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center ms-lg-5">
 
-                <div className="header-search-btn" id="searchButton">
+                {/* <div className="header-search-btn" id="searchButton">
                   <button className="btn">
                     <svg onClick={() => setSearchOpen(!isSearchOpen)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <g clipPath="url(#clip0_1_195)">
@@ -122,7 +138,7 @@ const HeaderOne = ({style_2} :any) => {
                       </defs>
                     </svg>
                   </button>
-                </div>
+                </div> */}
 
                 <button id="theme-toggle" onClick={toggleTheme}
                   className={`theme-btn ${theme === "light-mode" ? "" : "light-mode-active"}`}>
@@ -165,7 +181,7 @@ const HeaderOne = ({style_2} :any) => {
           </div>
         </nav>
       </header>
-      <SearchArea setSearchOpen={setSearchOpen} isSearchOpen={isSearchOpen} />
+      {/* <SearchArea setSearchOpen={setSearchOpen} isSearchOpen={isSearchOpen} /> */}
       <OffCanvas setOpenCavas={setOpenCavas} openCanvas={openCanvas} />
     </>
   );

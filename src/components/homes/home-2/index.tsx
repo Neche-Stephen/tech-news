@@ -20,17 +20,17 @@ const HomeTwo = () => {
 		<>
 			<HeaderOne style_2={true} />
       <HeroArea />
-      <VideoArea />
+      {/* <VideoArea /> */}
       <MissionArea />
       <ServiceArea />
       <ProjectArea />
       <CategoryArea />
-      <ProcessArea />
-      <TeamArea />
+      {/* <ProcessArea /> */}
+      {/* <TeamArea /> */}
       <PriceArea />
-      <FaqArea />
-      <TestimonialArea />
-      <BlogArea />
+      {/* <FaqArea /> */}
+      {/* <TestimonialArea /> */}
+      {/* <BlogArea /> */}
       <FooterOne style_2={true} />
       <BackToTop />
 		</>

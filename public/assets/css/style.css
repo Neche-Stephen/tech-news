@@ -687,6 +687,10 @@ picture.jarallax-img img {
 .header-area .navbar-nav li > a:hover {
   color: #FFC107;
 }
+
+.header-area .navbar-nav li > a.active {
+  color: #FFC107;
+}
 .header-area .navbar-nav li .vorix-dd-menu {
   list-style: none;
   background-color: transparent;
@@ -5291,6 +5295,10 @@ form .btn {
 }
 .light-mode .header-area .navbar-nav li > a {
   color: #0E0E0E;
+}
+
+.light-mode .header-area .navbar-nav li > a.active {
+  color: #ECC80B;
 }
 .light-mode .header-area .navbar-nav li .vorix-dd-menu {
   background-color: #F6F5F3;

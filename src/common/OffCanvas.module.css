@@ -1,0 +1,12 @@
+.offcanvasLogo {
+  height: 40px;
+  width: auto;
+  max-width: 150px;
+}
+
+@media only screen and (min-width: 768px) {
+  .offcanvasLogo {
+    height: 95px;
+    max-width: 170px;
+  }
+} 

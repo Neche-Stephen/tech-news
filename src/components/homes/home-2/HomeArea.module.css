@@ -1,0 +1,31 @@
+.icons_container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icons_container .icon_circle:nth-child(2) {
+  /* transform: translateX(-12px); */
+}
+
+.icons_container .icon_circle:nth-child(3) {
+  /* transform: translateX(-24px); */
+}
+
+.icon_circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bg_black_gradient { background: linear-gradient(135deg, #374151, #000000); }
+  .bg_gray_gradient { background: linear-gradient(135deg, #6b7280, #374151); }
+  .bg_gold_gradient { background: linear-gradient(135deg, #fbbf24, #d97706); }
+  /* .bg_gold_modified_gradient { background: linear-gradient(135deg, #ECC80B, #d97706); } */
+  .bg_gold_modified_gradient { background: #ECC80B; }
+
+  

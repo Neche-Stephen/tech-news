@@ -1,7 +1,43 @@
  
- 
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
 const ContactArea = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    phone: '',
+    subject: ''
+  });
+  const [loading, setLoading] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    emailjs.sendForm('service_tdn8shp', 'template_8pwx7qv', e.currentTarget, { publicKey: 'SmieTEuGTW_kxOy7Y' })
+      .then(
+        () => {
+          setModalMessage('Your message was sent successfully!');
+          setModalOpen(true);
+          setLoading(false);
+          setFormData({ name: '', email: '', message: '', phone: '', subject: '' });
+        },
+        (error) => {
+          setModalMessage('Failed to send message. Please try again.');
+          setModalOpen(true);
+          setLoading(false);
+        },
+      );
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    console.log(e.target.value);
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   return (
     <>
       <div className="contact-details-wrap">
@@ -28,7 +64,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">Phone number</p>
-                <h4>+44 204 577 0077</h4>
+                <h4>+234 903 903 0524</h4>
               </div>
             </div>
 
@@ -44,7 +80,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">Email address</p>
-                <h4>Vorix@gmail.com</h4>
+                <h4>admin@profech.com</h4>
               </div>
             </div>
 
@@ -60,7 +96,7 @@ const ContactArea = () => {
                 </div>
 
                 <p className="mb-0">Office Address</p>
-                <h4>Washington Ave, NY</h4>
+                <h4>Lagos, Nigeria</h4>
               </div>
             </div>
           </div>
@@ -69,14 +105,14 @@ const ContactArea = () => {
         <div className="divider"></div>
 
 
-        <div className="maps-wrap">
+        {/* <div className="maps-wrap">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25280012016!2d-74.14448732737499!3d40.69763123331177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1732385899288!5m2!1sen!2sbd"
             referrerPolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        </div> */}
 
 
-        <div className="contact-form-wrap contact-page-form">
+        <div className="contact-form-wrap contact-page-form mt-5">
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-12 col-lg-10">
@@ -87,32 +123,33 @@ const ContactArea = () => {
 
                   <div className="divider-sm"></div>
 
-                  <form onClick={(e) => e.preventDefault()}>
+                  <form onSubmit={sendEmail}>
                     <div className="row g-4 g-xl-5">
                       <div className="col-12 col-lg-6">
-                        <input type="text" className="form-control" placeholder="Your Name" />
+                        <input name="name" onChange={handleChange} type="text" className="form-control" placeholder="Your Name" value={formData.name} required />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <input type="email" className="form-control" placeholder="Email Address" />
+                        <input name="email" onChange={handleChange} type="email" className="form-control" placeholder="Email Address" value={formData.email} required />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <input type="text" className="form-control" placeholder="Your Phone" />
+                        <input name="phone" onChange={handleChange} type="text" className="form-control" placeholder="Your Phone" value={formData.phone} required />
                       </div>
                       <div className="col-12 col-lg-6">
-                        <select className="form-control">
+                        <select name="subject" onChange={handleChange} className="form-control" value={formData.subject} required>
                           <option value="">Select Subject</option>
-                          <option value="">Help &amp; Support</option>
-                          <option value="">Features Inquiry</option>
+                          <option value="General Inquiry">General Inquiry</option>
+                          <option value="Help &amp; Support">Help &amp; Support</option>
+                          <option value="Features Inquiry">Features Inquiry</option>
                         </select>
                       </div>
                       <div className="col-12">
-                        <textarea className="form-control" rows={20} cols={30}
-                          placeholder="Type your message"></textarea>
+                        <textarea name="message" onChange={handleChange} className="form-control" rows={20} cols={30} placeholder="Type your message" value={formData.message} required></textarea>
                       </div>
                       <div className="col-12">
                         <div className="text-center">
-                          <button type="submit" className="btn btn-primary rounded-pill"><span>SEND
-                            MESSAGE</span><span>SEND MESSAGE</span></button>
+                          <button type="submit" className="btn btn-primary rounded-pill" disabled={loading}>
+                            {loading ? <><span>Sending...</span> <span>Sending...</span></> : <><span>SEND MESSAGE</span><span>SEND MESSAGE</span></>}
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -123,6 +160,14 @@ const ContactArea = () => {
           </div>
         </div>
       </div>
+      {modalOpen && (
+        <div style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999}}>
+          <div style={{background: 'white', padding: '2rem', borderRadius: '8px', minWidth: '300px', textAlign: 'center'}}>
+            <p>{modalMessage}</p>
+            <button className="btn btn-primary" onClick={() => setModalOpen(false)}>Close</button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

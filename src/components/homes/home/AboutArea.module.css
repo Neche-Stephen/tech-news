@@ -1,0 +1,5 @@
+:global(.about-us-thumbnail) :local(.aboutImgCover) {
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+} 

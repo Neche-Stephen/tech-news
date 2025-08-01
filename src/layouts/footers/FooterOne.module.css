@@ -1,0 +1,20 @@
+.footerLogo {
+  height: 60px;
+  width: auto;
+  max-width: 200px;
+  /* margin-bottom: 1rem; */
+}
+
+@media only screen and (min-width: 768px) {
+  .footerLogo {
+    height: 70px;
+    max-width: 220px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footerLogo {
+    height: 80px;
+    max-width: 240px;
+  }
+} 

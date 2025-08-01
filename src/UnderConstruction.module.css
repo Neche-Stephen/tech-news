@@ -1,0 +1,41 @@
+.container {
+  min-height: 100vh;
+  background-color: #0a0a0a; /* black */
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  max-width: 220px;
+}
+
+.textGold {
+  color: #d4af37; /* gold */
+}
+
+.textLight {
+  color: #cccccc;
+}
+
+.inputDark {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #d4af37;
+}
+
+.inputDark::placeholder {
+  color: #cccccc;
+}
+
+.btnGold {
+  background-color: #d4af37;
+  color: #0a0a0a;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btnGold:hover {
+  background-color: #b38e2e;
+  color: white;
+}

@@ -20,11 +20,11 @@ const CategoryArea: FC = () => {
           <Marquee gradient={false} speed={50}>
             <h2 className="d-flex align-items-center mb-0">
               <span>#</span>
-              <span>Web Design</span>
+              <span>Website Development</span>
               <span>#</span>
-              <span>Web Development</span>
+              <span>Website Maintenance</span>
               <span>#</span>
-              <span>UI/UX Design</span>
+              <span>Search Engine Optimization</span>
             </h2>
           </Marquee>
         </Suspense>
