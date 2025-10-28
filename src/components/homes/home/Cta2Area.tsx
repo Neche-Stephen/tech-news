@@ -21,8 +21,7 @@ const Cta2Area = () => {
                 data-wow-duration="1000ms"
                 data-wow-delay="900ms"
               >
-               Ready to transform your digital presence? Our web development team combines technical expertise 
-          with creative vision to deliver websites and applications that drive business growth. 
+               Ready to enhance your healthcare practice online? Our team combines technical expertise with healthcare focus to deliver websites and systems that help you grow your practice. 
               </p>
               <a
                 href="/contact"

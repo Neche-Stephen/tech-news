@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import useSticky from "../../hooks/use-sticky";
 import { Link, useLocation } from "react-router-dom";
 import menu_data from "../../data/menu-data";
-import SearchArea from "../../common/SearchArea";
+// import SearchArea from "../../common/SearchArea";
 import OffCanvas from "../../common/OffCanvas";
 import styles from "./HeaderOne.module.css";
 
@@ -26,7 +26,7 @@ const HeaderOne = ({style_2} :any) => {
   };
 
   const { sticky } = useSticky()
-  const [isSearchOpen, setSearchOpen] = useState(false);
+  // const [isSearchOpen, setSearchOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openCanvas, setOpenCavas] = useState(false)
 
@@ -41,15 +41,15 @@ const HeaderOne = ({style_2} :any) => {
 		}
 	};
 
-  const [navTitle2, setNavTitle2] = useState("");
+  // const [navTitle2, setNavTitle2] = useState("");
 	//openMobileMenu
-	const openMobileMenu2 = (menu: string) => {
-		if (navTitle2 === menu) {
-			setNavTitle2("");
-		} else {
-			setNavTitle2(menu);
-		}
-	};
+	// const openMobileMenu2 = (menu: string) => {
+	//	if (navTitle2 === menu) {
+	//		setNavTitle2("");
+	//	} else {
+	//		setNavTitle2(menu);
+	//	}
+	// };
 
 
  

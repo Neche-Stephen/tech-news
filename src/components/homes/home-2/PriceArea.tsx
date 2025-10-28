@@ -4,12 +4,12 @@ import emailjs from '@emailjs/browser';
 const PLAN_OPTIONS = [
   { label: 'Basic (₦200k)', value: 'Basic' },
   { label: 'Standard (₦300k)', value: 'Standard' },
-  { label: 'Custom', value: 'Custom' },
+  { label: 'Premium (₦500k)', value: 'Premium' },
 ];
 
 const PriceArea = ({style_2}: any) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState('');
+  // const [selectedPlan, setSelectedPlan] = useState('');
   const [loading, setLoading] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
   const [messageOpen, setMessageOpen] = useState(false);
@@ -24,7 +24,6 @@ const PriceArea = ({style_2}: any) => {
   });
 
   const openInquiryModal = (plan: string) => {
-    setSelectedPlan(plan);
     setFormData(f => ({ ...f, plan }));
     setModalOpen(true);
   };
@@ -82,7 +81,7 @@ const PriceArea = ({style_2}: any) => {
                 <div className="price-info">
                   <h6>Basic</h6>
                   <h3 className="price">₦200k</h3>
-                  <p className="mb-0">Small businesses, or professionals looking to establish a basic online presence.</p>
+                  <p className="mb-0">Perfect for small clinics or health startups looking to establish an online presence.</p>
                 </div>
 
                 <ul className="price-description list-unstyled">
@@ -99,7 +98,7 @@ const PriceArea = ({style_2}: any) => {
                 </ul>
 
                 <div className="choose-plan">
-                  <a href="#" className="btn btn-dark w-100" onClick={e => { e.preventDefault(); openInquiryModal('Basic'); }}><span>Choose this plan</span><span>Choose this plan</span></a>
+                  <a href="#" className="btn btn-primary w-100" onClick={e => { e.preventDefault(); openInquiryModal('Basic'); }}><span>Choose this plan</span><span>Choose this plan</span></a>
                 </div>
               </div>
             </div>
@@ -110,7 +109,7 @@ const PriceArea = ({style_2}: any) => {
                 <div className="price-info">
                   <h6>Standard</h6>
                   <h3 className="price">₦300k</h3>
-                  <p className="mb-0">Ideal for medium size or growing businesses wanting a complete, informative website</p>
+                  <p className="mb-0">Ideal for clinics, practices, hospitals, or wellness centers wanting a full, informative website.</p>
                 </div>
 
                 <ul className="price-description list-unstyled">
@@ -131,26 +130,44 @@ const PriceArea = ({style_2}: any) => {
             <div className="col-12 col-md-6 col-lg-4">
               <div className="price-card h-100">
                 <div className="price-info">
-                  <h6>Custom</h6>
+                  <h6>Premium Package</h6>
+                  <h3 className="price">₦500k</h3>
                   <p className="mb-0">
-                    Perfect for businesses or individuals with unique requirements. Get a tailored solution designed specifically for your needs.
+                    Complete solution for healthcare practices wanting online booking capabilities and enhanced patient management.
                   </p>
                 </div>
 
                 <ul className="price-description list-unstyled">
-                  <li><span className="material-symbols-outlined">check</span> Bespoke website or web app development</li>
-                  <li><span className="material-symbols-outlined">check</span> Advanced integrations (APIs, payment, etc.)</li>
-                  <li><span className="material-symbols-outlined">check</span> Custom design and branding</li>
-                  <li><span className="material-symbols-outlined">check</span> Ongoing support and maintenance</li>
-                  <li><span className="material-symbols-outlined">check</span> Any feature you need—just ask!</li>
+                  <li><span className="material-symbols-outlined">check</span> Everything in the Standard Package</li>
+                  <li><span className="material-symbols-outlined">check</span> Patient appointment booking system</li>
+                  <li><span className="material-symbols-outlined">check</span> Calendar integration and management</li>
+                  <li><span className="material-symbols-outlined">check</span> Email notifications for appointments</li>
+                  <li><span className="material-symbols-outlined">check</span> Patient booking confirmation system</li>
                 </ul>
 
                 <div className="choose-plan">
-                  <a href="#" className="btn btn-dark w-100" onClick={e => { e.preventDefault(); openInquiryModal('Custom'); }}><span>Contact Us for a Custom Quote</span><span>Contact Us for a Custom Quote</span></a>
+                  <a href="#" className="btn btn-primary w-100" onClick={e => { e.preventDefault(); openInquiryModal('Premium'); }}><span>Choose this plan</span><span>Choose this plan</span></a>
                 </div>
               </div>
             </div>
 
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-8">
+              <div className="text-center mt-5 p-4" style={{background: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef'}}>
+                <h5 className="mb-3">Need Something Custom?</h5>
+                <p className="mb-2" style={{color: '#666'}}>
+                  If you have any specific needs beyond our predefined packages, you can request custom services by reaching out to us.
+                </p>
+                <a href="/contact" className="btn btn-primary" style={{padding: '12px 24px'}}>
+                  <span>Contact Us</span>
+                  <span>Contact Us</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

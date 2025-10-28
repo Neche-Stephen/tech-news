@@ -28,13 +28,13 @@ const MissionArea = () => {
 
             <div className="col-12 col-lg-6">
               <div className="mission-vision-content">
-                <h2>Websites That Work for You</h2>
+                <h2>Healthcare Websites That Work for You</h2>
                 <p className="mb-4">
-                  We are a digital solutions company focused on empowering
-                  businesses through innovative website design and development.
-                  We blend design, technology, and strategy to craft
-                  high-performing websites that elevate brands and drive
-                  business growth.
+                  We are a specialized web development company focused on empowering
+                  healthcare organizations through professional website design and development.
+                  We blend medical industry knowledge, technology, and design to craft
+                  high-performing websites that build patient trust and drive
+                  healthcare growth.
                 </p>
 
                 <div className="mission-vision-accordion">
@@ -58,9 +58,7 @@ const MissionArea = () => {
                         data-bs-parent="#missionVision"
                       >
                         <div className="accordion-body">
-                          To create professional, user-friendly, and
-                          business-centric websites that help our clients
-                          establish a strong digital presence
+                        Our mission is to help healthcare providers and organizations build professional, user-friendly websites that showcase their expertise, simplify patient interactions, and strengthen their online reputation.
                         </div>
                       </div>
                     </div>
@@ -84,8 +82,7 @@ const MissionArea = () => {
                         data-bs-parent="#missionVision"
                       >
                         <div className="accordion-body">
-                          To be a trusted tech partner for businesses looking to
-                          scale through digital transformation.
+                        To empower medical and healthcare professionals with a strong digital presence that enhances trust, accessibility, and patient engagement worldwide.
                         </div>
                       </div>
                     </div>

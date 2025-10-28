@@ -1,9 +1,4 @@
-import { FaClock, FaCheckCircle } from "react-icons/fa";
-import { HiBadgeCheck } from "react-icons/hi";
 import {
-  Palette,
-  Code,
-  Target,
   Clock,
   Shield,
   CheckCircle,
@@ -25,7 +20,7 @@ const HeroArea = () => {
                   data-wow-duration="1000ms"
                   data-wow-delay="700ms"
                 >
-                  We're a Design & Development Agency
+                  Healthcare Website Development Agency
                 </h2>
               </div>
             </div>
@@ -55,8 +50,8 @@ const HeroArea = () => {
                     </div>
                   </div>
                   <h6 className="mb-0">
-                    Fast Delivery, <br />
-                    Quality Results
+                    Professional Websites, <br />
+                    For Healthcare Providers
                   </h6>
                 </div>
                 <p
@@ -64,9 +59,10 @@ const HeroArea = () => {
                   data-wow-duration="1000ms"
                   data-wow-delay="1100ms"
                 >
-                  Every project starts with understanding your unique goals. We
-                  combine creative design with smart development to build
-                  digital solutions that drive real results for your business.
+                  We specialize in creating professional websites for healthcare 
+                  providers. From basic practice websites to advanced appointment 
+                  booking systems, we help medical professionals build a 
+                  strong online presence.
                 </p>
                 <a
                   href="/contact"

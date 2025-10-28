@@ -25,7 +25,7 @@ const ContactArea = () => {
           setLoading(false);
           setFormData({ name: '', email: '', message: '', phone: '', subject: '' });
         },
-        (error) => {
+        (_error) => {
           setModalMessage('Failed to send message. Please try again.');
           setModalOpen(true);
           setLoading(false);

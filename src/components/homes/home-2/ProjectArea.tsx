@@ -14,7 +14,7 @@ const ProjectArea = () => {
           <div className="row g-5 align-items-end justify-content-between">
             <div className="col-12 col-md-6 col-lg-5">
               <div className="section-heading">
-                <h2 className="mb-0">Let's See Our Projects</h2>
+                <h2 className="mb-0">Our Healthcare Projects</h2>
               </div>
             </div>
 
@@ -100,11 +100,11 @@ const ProjectArea = () => {
 
                 <SwiperSlide className="swiper-slide">
                   <div className="portfolio-card-two">
-                    <img src="/assets/img/project/madiba.png" alt="" className={styles.projectImage} />
+                    <img src="/assets/img/project/eatwise.png" alt="" className={styles.projectImage} />
 
 
                     <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="https://madibahostel.com/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://eat-wise-two.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <span className="material-symbols-outlined">
                           arrow_outward
                         </span>
@@ -114,52 +114,11 @@ const ProjectArea = () => {
 
 
                   <div className="portfolio-content-two">
-                    <h3>Feedback App</h3>
-                    <p className="mb-0">Lightweight feedback tool for browser extension developers</p>
+                    <h3>EatWise</h3>
+                    <p className="mb-0">Healthy eating app that makes nutrition approachable and stress-free for busy lifestyles</p>
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="swiper-slide">
-                  <div className="portfolio-card-two">
-                    <img src="/assets/img/project/feedbk.png" alt="" className={styles.projectImage} />
-
-
-                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="https://feedbk.app/" target="_blank" rel="noopener noreferrer">
-                        <span className="material-symbols-outlined">
-                          arrow_outward
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-
-
-                  <div className="portfolio-content-two">
-                    <h3>Feedback App</h3>
-                    <p className="mb-0">Lightweight feedback tool for browser extension developers</p>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide className="swiper-slide">
-                  <div className="portfolio-card-two">
-                    <img src="/assets/img/project/crackit.png" alt="" className={styles.projectImage} />
-
-
-                    <div className="portfolio-overlay-content d-flex align-items-center justify-content-between">
-                      <a href="https://crack-it-hunt.vercel.app/" target="_blank" rel="noopener noreferrer">
-                        <span className="material-symbols-outlined">
-                          arrow_outward
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-
-
-                  <div className="portfolio-content-two">
-                    <h3>Crack it Find it</h3>
-                    <p className="mb-0">Interactive website for a cerebral hunt show, that seamlessly blends intellect and adventure</p>
-                  </div>
-                </SwiperSlide>
 
                 {/* <SwiperSlide className="swiper-slide">
                   <div className="portfolio-card-two">

@@ -3,9 +3,14 @@ update feedback favicon
 can launch
 Reduce heavy pictures size
 Picture in service, contact and about us are the same
-use admin profech email in contact and business template
 logos in Our Services may not be matching
+Add zoho email to my phone email
 
+Can launch - medical
+
+Some terms (like in services) seems to be targeted at medical practice, but we are also open to building for general hospitals that might multiple general services, saying practice seems to indicate we are limiting to only health care organizations that have single practices
+
+Later, I will try to use the term hospital in place of healthcare in some places because nigerian market might be more familiar with the term hospital
 
 undecided
 remove feedback app
@@ -15,5 +20,5 @@ i want to make the service details to be able to able to represent multiple serv
 work on terms and srvie and privacy policy
 facebook url in footer, since facebook is banned
 logo color to our page color
-
+No services page available
 

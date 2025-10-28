@@ -3,12 +3,12 @@ import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const services = [
-  { icon: "web", title: "Website Design & Development", description: "Websites tailored to your business needs, using the top industry technologies." },
-  { icon: "ads_click", title: "Search Engine Optimization", description: "Boost your visibility on Google with targeted SEO strategies." },
-  { icon: "stream_apps", title: "E-commerce Website Development", description: "Powerful online stores with secure payment gateways" },
-  { icon: "design_services", title: "Business Website Development", description: "Professional websites designed to showcase your brand, attract customers." },
-  { icon: "ads_click", title: "Website Redesign & Maintenance", description: "Modernize outdated sites with fresh designs, and ongoing maintenance" },
-  { icon: "web", title: "Portfolio & Personal Websites", description: "Stand out with a sleek portfolio or personal website that highlights your work" },
+  { icon: "web", title: "Healthcare Website Development", description: "Professional websites tailored to medical practices, clinics and healthcare organizations." },
+  { icon: "ads_click", title: "Healthcare SEO Services", description: "Boost your practice visibility on Google with targeted healthcare SEO strategies." },
+  { icon: "calendar_month", title: "Appointment Booking Systems", description: "Advanced online scheduling systems that let patients book appointments 24/7." },
+  { icon: "local_hospital", title: "Medical Practice Websites", description: "Professional websites designed to showcase your medical services and build trust." },
+  { icon: "build", title: "Medical Website Redesign & Maintenance", description: "Modernize outdated medical sites with fresh designs, and ongoing maintenance" },
+  { icon: "health_and_safety", title: "Clinic & Hospital Websites", description: "Comprehensive websites for healthcare facilities of all sizes and specialties" },
   
 ];
 
@@ -24,12 +24,12 @@ const ServiceArea = () => {
          <div className="row g-4 g-lg-5">
           {services.map((item, i) => (
              <div key={i} className="col-12 col-md-6 col-xl-4">
-             <Link to="/service-details">
+             <Link to="#">
                 <div onMouseEnter={() => setActiveIndex(i)}
                     onMouseLeave={() => setActiveIndex(null)}
                     className={`service-slide-card  ${activeIndex === i ? "active" : ""}`}>
                    <span className="material-symbols-outlined">{item.icon}</span>
-                   <h2 style={{ bottom: `${activeIndex === i ? '140px' : ''}` }}>{item.title}</h2>
+                   <h2 style={{ bottom: `${activeIndex === i ? '155px' : ''}` }}>{item.title}</h2>
                     <p className="mb-0" style={{ bottom: `${activeIndex === i ? '45px' : ''}` }}>
                       {item.description}
                     </p>

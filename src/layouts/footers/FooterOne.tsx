@@ -19,7 +19,9 @@ const FooterOne = ({ style_2 }: any) => {
                   <img className={`${styles.footerLogo} light-logo`} src="/assets/img/core-img/pf-all-yellow.png" alt="Profech Logo" />
                 </a>
 
-                <p className="mb-0">Digital solutions company empowering businesses with innovative websites.</p>
+                <p className="mb-0">Digital solutions that empower healthcare organizations with innovative, secure, and user-friendly websites</p>
+
+                
 
                 <div className="social-nav">
                   {/* <a href="https://facebook.com/profechIT" target="_blank" rel="noopener noreferrer">
@@ -68,7 +70,7 @@ const FooterOne = ({ style_2 }: any) => {
                    <li><a>Website Development</a></li>
                   <li><a>SE0</a></li>
                   <li><a>Website Redesign</a></li>
-                  <li><a>Business Websites</a></li>
+                  <li><a>Appointment Booking Systems</a></li>
                   <li><a>Portfolio & Personal Websites</a></li>
                 </ul>
               </div>

@@ -1,21 +1,9 @@
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";  
 import Wrapper from "./layouts/Wrapper";
-import HomeOne from "./components/homes/home";
 import HomeTwo from "./components/homes/home-2";
 import Aboutus from "./components/about-us";
 import Service from "./components/service";
-import ServiceDetails from "./components/service-details";
-import Register from "./components/register";
-import Login from "./components/login";
-import PricingPlan from "./components/pricing-plan";
-import Faq from "./components/faq";
-import Team from "./components/team";
-import TeamDetails from "./components/team-details";
-import Portfolio from "./components/portfolio";
-import PortfolioDetails from "./components/portfolio-details";
-import Blog from "./components/blog";
-import BlogDetails from "./components/blog-details";
 import Contact from "./components/contact";
 import ErrorArea from "./components/error";
  

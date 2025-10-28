@@ -52,9 +52,11 @@ const ServiceArea = () => {
               },
             }}
             className="swiper service-two-swiper"
+            
           >
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
+            <SwiperSlide className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              {/* <Link to="/service-details"> */}
+              <Link to="#" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -88,15 +90,16 @@ const ServiceArea = () => {
                     </defs>
                   </svg>
                 </div>
-                <h2>Website Design & Development</h2>
+                <h2>Healthcare Website Development</h2>
                 <p className="mb-0">
-                  We build websites tailored to your business needs, using the
-                  top industry technologies to deliver excellent results.
+                  Professional websites designed specifically for healthcare providers.
+                  Showcase your services, staff, and build trust with patients online.
                 </p>
               </Link>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
+            <SwiperSlide className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              {/* <Link to="/service-details"> */}
+              <Link to="#" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -118,15 +121,16 @@ const ServiceArea = () => {
                     </defs>
                   </svg>
                 </div>
-                <h2>Website Redesign & Maintenance</h2>
+                <h2>Medical Website Redesign & Maintenance</h2>
                 <p className="mb-0">
-                  Modernize outdated sites with fresh designs, and ongoing
-                  maintenance to keep your site running smoothly.
+                  Modernize outdated medical sites with fresh designs, and 
+                  ongoing maintenance to keep your healthcare site running smoothly.
                 </p>
               </Link>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
+            <SwiperSlide className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              {/* <Link to="/service-details"> */}
+              <Link to="#" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -149,15 +153,16 @@ const ServiceArea = () => {
                     />
                   </svg>
                 </div>
-                <h2>Search Engine Optimization</h2>
+                <h2>Healthcare SEO Services</h2>
                 <p className="mb-0">
-                  Boost your visibility on Google with targeted SEO strategies
-                  that drive organic traffic and increase conversions.
+                  Boost your healthcare visibility on Google with targeted SEO 
+                  strategies that help patients find you and increase appointments.
                 </p>
               </Link>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
+            <SwiperSlide className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              {/* <Link to="/service-details"> */}
+              <Link to="#" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -191,45 +196,17 @@ const ServiceArea = () => {
                     </defs>
                   </svg>
                 </div>
-                <h2>E-commerce Website Development</h2>
+                <h2>Appointment Booking Systems</h2>
                 <p className="mb-0">
-                Powerful online stores with secure payment gateways, and mobile-friendly 
-            shopping experiences.
+                Advanced online scheduling systems that let patients book appointments 
+            24/7, reducing phone calls and improving efficiency.
                 </p>
               </Link>
             </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
-                <div className="icon-wrapper">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    viewBox="0 0 50 50"
-                    fill="none"
-                  >
-                    <g clipPath="url(#clip0_1_688)">
-                      <path
-                        d="M49.3896 23.5271L41.6375 15.775C41.6396 15.7229 41.6667 15.6771 41.6667 15.625V9.375C41.6667 8.225 40.7354 7.29167 39.5833 7.29167H18.75V2.08333C18.75 0.933333 17.8188 0 16.6667 0H2.08333C0.93125 0 0 0.933333 0 2.08333V16.6667C0 17.8167 0.93125 18.75 2.08333 18.75H16.6667C17.8188 18.75 18.75 17.8167 18.75 16.6667V11.4583H37.5V15.625C37.5 15.6771 37.5271 15.7229 37.5292 15.775L29.7771 23.5271C28.9625 24.3417 28.9625 25.6583 29.7771 26.4729L37.5292 34.225C37.5271 34.2771 37.5 34.3229 37.5 34.375V38.5417H18.4979C17.5458 34.375 13.8271 31.25 9.375 31.25C4.20625 31.25 0 35.4562 0 40.625C0 45.7937 4.20625 50 9.375 50C13.8271 50 17.5458 46.875 18.4979 42.7083H39.5833C40.7354 42.7083 41.6667 41.775 41.6667 40.625V34.375C41.6667 34.3229 41.6396 34.2771 41.6375 34.225L49.3896 26.4729C50.2042 25.6583 50.2042 24.3417 49.3896 23.5271ZM14.5833 14.5833H4.16667V4.16667H14.5833V14.5833ZM9.375 45.8333C6.50208 45.8333 4.16667 43.4958 4.16667 40.625C4.16667 37.7542 6.50208 35.4167 9.375 35.4167C12.2479 35.4167 14.5833 37.7542 14.5833 40.625C14.5833 43.4958 12.2479 45.8333 9.375 45.8333Z"
-                        fill="#ECC80B"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_1_688">
-                        <rect width="50" height="50" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <h2>Business Website Development</h2>
-                <p className="mb-0">
-                Professional websites designed to showcase your brand, attract customers, and grow your 
-            business online.
-                </p>
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <Link to="/service-details">
+
+            <SwiperSlide className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              {/* <Link to="/service-details"> */}
+              <Link to="#" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div className="icon-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,8 +231,7 @@ const ServiceArea = () => {
                 </div>
                 <h2>Portfolio & Personal Websites</h2>
                 <p className="mb-0">
-                Stand out with a sleek portfolio or personal website that highlights your work, skills, 
-            and professional story.
+                Stand out with a sleek portfolio or personal website that highlights your healthcare experience, medical qualifications, and professional story.
                 </p>
               </Link>
             </SwiperSlide>
