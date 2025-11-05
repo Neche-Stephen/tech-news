@@ -68,7 +68,7 @@ const HeaderOne = ({style_2} :any) => {
 
             <button onClick={() => setMenuOpen(!menuOpen)} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vorixNav"
               aria-controls="vorixNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="material-symbols-outlined">view_cozy</span>
+              <span className="material-symbols-outlined">Menu</span>
             </button>
 
 
